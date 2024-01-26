@@ -5,12 +5,12 @@ default: &default
 
 development:
   <<: *default
-  database: rails-watch-list-img_development
+  database: rails-watch-list_development
 
 test:
   <<: *default
-  database: rails-watch-list-img_test
+  database: rails-watch-list_test
 
 production:
   <<: *default
-  database: rails-watch-list-img_production
+  url: <%= ENV['DATABASE_URL'] %>
